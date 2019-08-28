@@ -20,7 +20,7 @@
 	</properties>
 
 	<modules>
-		<module>yeogiyo-store</module>
+		<module>yeogiyo-shop</module>
 		<module>yeogiyo-menu</module>
 		<module>yeogiyo-order</module>
    		<module>yeogiyo-shared</module>
