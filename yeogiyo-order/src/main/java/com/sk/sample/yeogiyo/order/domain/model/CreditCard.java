@@ -1,8 +1,8 @@
-package com.sk.sample.mall.order.domain.model;
+package com.sk.sample.yeogiyo.order.domain.model;
 
 import javax.persistence.Embeddable;
 
-import com.sk.sample.mall.shared.base.ValueObject;
+import com.sk.sample.yeogiyo.shared.base.ValueObject;
 
 import lombok.Data;
 

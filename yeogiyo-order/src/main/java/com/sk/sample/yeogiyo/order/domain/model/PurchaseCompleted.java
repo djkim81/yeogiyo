@@ -1,4 +1,4 @@
-package com.sk.sample.mall.order.domain.model;
+package com.sk.sample.yeogiyo.order.domain.model;
 
 import java.io.Serializable;
 

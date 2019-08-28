@@ -1,4 +1,4 @@
-package com.sk.sample.mall.order.application.proxy.feign;
+package com.sk.sample.yeogiyo.order.application.proxy.feign;
 
 import java.util.Collection;
 
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.sk.sample.mall.order.application.proxy.feign.dto.product.Product;
+import com.sk.sample.yeogiyo.order.application.proxy.feign.dto.product.Product;
 
 @Service
 public class ProductProxy {

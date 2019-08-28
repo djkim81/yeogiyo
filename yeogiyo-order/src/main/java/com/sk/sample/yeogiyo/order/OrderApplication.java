@@ -1,4 +1,4 @@
-package com.sk.sample.mall.order;
+package com.sk.sample.yeogiyo.order;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
@@ -7,11 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
-import com.sk.sample.mall.order.domain.model.CreditCard;
-import com.sk.sample.mall.order.domain.model.Order;
-import com.sk.sample.mall.order.domain.repository.OrderRepository;
-import com.sk.sample.mall.order.domain.service.OrderService;
-import com.sk.sample.mall.shared.domain.Address;
+import com.sk.sample.yeogiyo.order.domain.model.CreditCard;
+import com.sk.sample.yeogiyo.order.domain.model.Order;
+import com.sk.sample.yeogiyo.order.domain.repository.OrderRepository;
+import com.sk.sample.yeogiyo.order.domain.service.OrderService;
+import com.sk.sample.yeogiyo.shared.domain.Address;
 
 @SpringBootApplication
 @EnableFeignClients

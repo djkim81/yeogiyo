@@ -1,4 +1,4 @@
-package com.sk.sample.mall.order.application.proxy.feign.dto.account;
+package com.sk.sample.yeogiyo.order.application.proxy.feign.dto.account;
 
 public enum MemberType {
 	SELLER,

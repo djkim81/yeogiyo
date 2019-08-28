@@ -1,9 +1,9 @@
-package com.sk.sample.mall.order.application.proxy.feign.dto.account;
+package com.sk.sample.yeogiyo.order.application.proxy.feign.dto.account;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
-import com.sk.sample.mall.shared.domain.Address;
+import com.sk.sample.yeogiyo.shared.domain.Address;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

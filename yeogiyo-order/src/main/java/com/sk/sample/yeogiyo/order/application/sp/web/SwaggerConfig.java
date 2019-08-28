@@ -1,4 +1,4 @@
-package com.sk.sample.mall.order.application.sp.web;
+package com.sk.sample.yeogiyo.order.application.sp.web;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

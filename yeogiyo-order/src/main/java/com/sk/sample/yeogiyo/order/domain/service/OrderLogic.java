@@ -1,14 +1,14 @@
-package com.sk.sample.mall.order.domain.service;
+package com.sk.sample.yeogiyo.order.domain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sk.sample.mall.order.application.proxy.feign.AccountProxy;
-import com.sk.sample.mall.order.application.proxy.feign.ProductProxy;
-import com.sk.sample.mall.order.application.proxy.feign.dto.account.Account;
-import com.sk.sample.mall.order.application.proxy.feign.dto.product.Product;
-import com.sk.sample.mall.order.domain.model.Order;
-import com.sk.sample.mall.order.domain.repository.OrderRepository;
+import com.sk.sample.yeogiyo.order.application.proxy.feign.AccountProxy;
+import com.sk.sample.yeogiyo.order.application.proxy.feign.ProductProxy;
+import com.sk.sample.yeogiyo.order.application.proxy.feign.dto.account.Account;
+import com.sk.sample.yeogiyo.order.application.proxy.feign.dto.product.Product;
+import com.sk.sample.yeogiyo.order.domain.model.Order;
+import com.sk.sample.yeogiyo.order.domain.repository.OrderRepository;
 
 @Service("orderLogic")
 public class OrderLogic implements OrderService {

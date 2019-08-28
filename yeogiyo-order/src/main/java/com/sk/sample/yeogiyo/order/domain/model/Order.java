@@ -1,11 +1,11 @@
-package com.sk.sample.mall.order.domain.model;
+package com.sk.sample.yeogiyo.order.domain.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import com.sk.sample.mall.shared.base.AbstractEntity;
-import com.sk.sample.mall.shared.base.AggregateRoot;
-import com.sk.sample.mall.shared.domain.Address;
+import com.sk.sample.yeogiyo.shared.base.AbstractEntity;
+import com.sk.sample.yeogiyo.shared.base.AggregateRoot;
+import com.sk.sample.yeogiyo.shared.domain.Address;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.sk.sample.mall.order.application.proxy.feign.dto.product;
+package com.sk.sample.yeogiyo.order.application.proxy.feign.dto.product;
 
 import lombok.Data;
 
