@@ -128,7 +128,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>${spring-boot.version}</version>
             	 <configuration>
-		          <mainClass>com.sk.sample.yeogiyo.MenuApplication</mainClass>
+		          <mainClass>com.sk.sample.yeogiyo.menu.MenuApplication</mainClass>
 		        </configuration>
 		        <executions>
 		          <execution>
