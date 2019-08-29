@@ -10,12 +10,11 @@ import org.springframework.hateoas.config.EnableHypermediaSupport;
 
 import com.querydsl.core.types.Predicate;
 
-
 import com.sk.sample.yeogiyo.order.domain.model.OrderType;
 import com.sk.sample.yeogiyo.order.domain.model.TableNum;
 import com.sk.sample.yeogiyo.order.domain.model.OrderType;
 
-import com.sk.sample.yeogiyo.order.domain.model.Order;
+import com.sk.sample.yeogiyo.order.domain.model.Ordered;
 import com.sk.sample.yeogiyo.order.domain.model.ShopId;
 //import com.sk.sample.yeogiyo.order.domain.model.QOrder;
 import com.sk.sample.yeogiyo.order.domain.repository.OrderRepository;
@@ -56,21 +55,33 @@ public class OrderApplication {
 		//Order order3 = new Order(new ShopId("1"), new TableNum(7002),OrderType.주문요청);
 		//orderRepository.save(order3);
 		
-		Order order1 = new Order(new ShopId("1"), new TableNum(7000));
+		Ordered order1 = new Ordered("shop_1","7001","주문요청","김치찌개","1","2019/08/29 14:25"); //, new TableNum(7000));
 		orderRepository.save(order1);
-		
+		Ordered order2 = new Ordered("shop_1","7002","주문요청","된장찌개","1","2019/08/29 14:35"); //, new TableNum(7000));
+		orderRepository.save(order2);
+		Ordered order3 = new Ordered("shop_1","7003","주문요청","돈까스","1","2019/08/29 14:37"); //, new TableNum(7000));
+		orderRepository.save(order3);		
 	}
 	
 	public void displayOrders(OrderRepository orderRepository) {
 		System.out.println("***************************************************************");
 		
-		Iterable<Order> orderList = orderRepository.findAll();
-		for(Order order : orderList) {
+		Iterable<Ordered> orderList = orderRepository.findAll();
+		for(Ordered order : orderList) {
 			System.out.println(order.toString());	
 		}
 		
 		System.out.println("***************************************************************");
 	}
+	
+	public void executeExample1(OrderRepository orderRepository) {
+		
+		//Ordered order = orderRepository.findByTable_num("7001");		
+		//order.setOrder_st("결제완료");
+		//orderRepository.save(order);
+		
+		//displayOrders(orderRepository);
+	}	
 	
 //	public void executeExample2(orderRepository productRepository) {
 //		Menu product = productRepository.findByName("Iron Man");
