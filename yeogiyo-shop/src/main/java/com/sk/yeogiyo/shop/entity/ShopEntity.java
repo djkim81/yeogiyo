@@ -7,11 +7,9 @@ import javax.persistence.Table;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.ToString;
 
-@NoArgsConstructor
 @ToString
 @Getter
 @Entity
@@ -105,8 +103,7 @@ public class ShopEntity {
     this.email = email;
     this.addr = addr;
   }
-  
+
   public ShopEntity() {
-    
   }
 }

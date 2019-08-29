@@ -23,7 +23,7 @@ public class ShopRepositoryTest {
   public void testShopRepository() {
     ShopEntity shopEntity = null;
     List<ShopEntity> retShopEntity = null;
-    shopEntity = new ShopEntity();
+//    shopEntity = new ShopEntity();
     shopEntity.setShopId("testShopId");
     shopEntity.setNm("testShopId");
     shopEntity.setDesc("testShopId");
