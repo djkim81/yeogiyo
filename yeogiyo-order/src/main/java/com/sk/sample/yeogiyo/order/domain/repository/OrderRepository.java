@@ -15,7 +15,7 @@ public interface OrderRepository extends PagingAndSortingRepository<Ordered, Lon
                                            QueryDslPredicateExecutor<Ordered> {
 	//List<Ordered> findAll(Predicate predicate); 
 	
-	//Ordered findByTableNum(@Param("table_num") String table_num);
+	Ordered findByTnum(@Param("tnum") String tnum);
 	//Ordered findByShop_id(@Param("shop_id") String shop_id);
 	
 	//Order findByShopId(@Param("shopid") ShopId shopid);

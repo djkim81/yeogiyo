@@ -14,15 +14,22 @@ import com.sk.sample.yeogiyo.order.domain.repository.OrderRepository;
 
 @Service("orderLogic")
 public class OrderLogic implements OrderService {
-//	@Autowired
-//	private OrderRepository orderRepository;
-//
+	@Autowired
+	private OrderRepository orderRepository;
+
 //	@Override
 //	@Transactional(readOnly=true)
 //	public Ordered findById(Long id) {
 //		return orderRepository.findOne(id);
 //	}
-//
+
+	@Override
+	@Transactional(readOnly=true)
+	public Ordered findByTnum(String tnum) {
+		return orderRepository.findByTnum(tnum);
+		//return null;
+	}
+	
 //	@Override
 //	@Transactional(readOnly=true)
 //	public Ordered findByTableNum(String table_num) {
@@ -30,17 +37,17 @@ public class OrderLogic implements OrderService {
 //	}
 	
 //
-//	@Override
-//	@Transactional
-//	public Account update(Long id, Account newAccount) {
-//		Account oldAccount = accountRepository.findOne(id);
-//		if(oldAccount != null) {
-//			BeanUtils.copyProperties(newAccount,  oldAccount, "id");
-//			return accountRepository.save(oldAccount);
-//		} else {
-//			return null;
-//		}
-//	}
+	@Override
+	@Transactional
+	public Ordered update(Long id, Ordered newOrder) {
+		Ordered oldOrder = orderRepository.findOne(id);
+		if(oldOrder != null) {
+			BeanUtils.copyProperties(newOrder,  oldOrder, "id");
+			return orderRepository.save(oldOrder);
+		} else {
+			return null;
+		}
+	}
 //
 //	@Override
 //	@Transactional

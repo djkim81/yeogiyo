@@ -22,7 +22,8 @@ public class Ordered extends AbstractEntity implements AggregateRoot {
 
 	private String shop_id;
 	private String order_st;
-	private String table_num;
+	//private String table_num;
+	private String tnum;
 	private String menu_nm;	
 	private String menu_cnt;
 	private String rgst_dtm;
@@ -33,9 +34,9 @@ public class Ordered extends AbstractEntity implements AggregateRoot {
 //		this.ordertype = ordertype;
 //	}
 
-	public Ordered(String shop_id, String table_num, String order_st, String menu_nm, String menu_cnt, String rgst_dtm) {
+	public Ordered(String shop_id, String tnum, String order_st, String menu_nm, String menu_cnt, String rgst_dtm) {
 		this.shop_id = shop_id;
-		this.table_num = table_num;
+		this.tnum = tnum;
 		this.order_st = order_st;
 		this.menu_nm = menu_nm;
 		this.menu_cnt = menu_cnt;
