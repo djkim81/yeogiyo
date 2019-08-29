@@ -44,7 +44,7 @@ public class OrderLogic implements OrderService {
 		if(oldOrder != null) {
 			BeanUtils.copyProperties(newOrder,  oldOrder, "id");
 			return orderRepository.save(oldOrder);
-		} else {
+		} else { 
 			return null;
 		}
 	}
