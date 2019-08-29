@@ -39,7 +39,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
-          <mainClass>com.sk.yeogiyo.sohp.YeogiyoShopApplicatoin</mainClass>
+          <mainClass>com.sk.yeogiyo.shop.YeogiyoShopApplicatoin</mainClass>
         </configuration>
         <executions>
           <execution>
