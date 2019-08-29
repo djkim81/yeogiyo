@@ -105,8 +105,4 @@ public class ShopEntity {
     this.email = email;
     this.addr = addr;
   }
-  
-  public ShopEntity() {
-    
-  }
 }

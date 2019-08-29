@@ -7,7 +7,7 @@
     <artifactId>yeogiyo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.sk.yeogiyo</groupId>
+  <groupId>com.sk.sample</groupId>
   <artifactId>yeogiyo-shop</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>

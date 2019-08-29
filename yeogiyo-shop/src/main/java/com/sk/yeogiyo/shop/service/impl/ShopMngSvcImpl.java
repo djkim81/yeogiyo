@@ -39,4 +39,26 @@ public class ShopMngSvcImpl implements ShopMngSvc {
     retMap.put("addr", shopEntity.getAddr());
     return retMap;
   }
+  
+  public void mod(String shopId, String nm, String desc, String passwd, String email, String addr) {
+	    ShopEntity shopEntity = null;
+	    shopEntity = new ShopEntity();
+	    shopEntity.setShopId(shopId);
+	    shopEntity.setNm(nm);
+	    shopEntity.setDesc(desc);
+	    shopEntity.setPasswd(passwd);
+	    shopEntity.setEmail(email);
+	    shopEntity.setAddr(addr);
+	    shopRepository.save(shopEntity);
+	  }
+
+  public boolean del(String shopId) {
+	  ShopEntity delShopid = shopRepository.findOne(shopId);
+	  if (delShopid == null) {
+		  return false;
+		} else {
+			shopRepository.delete(delShopid);
+			return true;
+		}
+	}
 }
