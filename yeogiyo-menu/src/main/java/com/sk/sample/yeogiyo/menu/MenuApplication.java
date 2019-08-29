@@ -41,13 +41,13 @@ public class MenuApplication {
 	}
 	
 	public void insertMenus(MenuRepository menuRepository) {
-		Menu menu1 = new Menu("김치찌게", new Price(7000), new MenuDescription(FoodType.KOREAN));
+		Menu menu1 = new Menu("김치찌게","a", new Price(7000), new MenuDescription(FoodType.KOREAN));
 		menuRepository.save(menu1);
 		
-		Menu menu2 = new Menu("짜장면", new Price(6000), new MenuDescription(FoodType.CHINESE));
+		Menu menu2 = new Menu("짜장면","a", new Price(6000), new MenuDescription(FoodType.CHINESE));
 		menuRepository.save(menu2);
 		
-		Menu menu3 = new Menu("파스타", new Price(12000), new MenuDescription(FoodType.ITALIAN));
+		Menu menu3 = new Menu("파스타","a", new Price(12000), new MenuDescription(FoodType.ITALIAN));
 		menuRepository.save(menu3);
 	}
 	

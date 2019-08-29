@@ -13,12 +13,14 @@ import lombok.EqualsAndHashCode;
 @Entity
 public class Menu extends AbstractEntity implements AggregateRoot {
 	private String name;
+	private String shopid;
 	private Price price;
 	
 	private MenuDescription menuDescription;
 	
-	public Menu(String name, Price price, MenuDescription menuDescription) {
+	public Menu(String name, String shopid,Price price, MenuDescription menuDescription) {
 		this.name = name;
+		this.shopid = shopid;
 		this.price = price;
 		this.menuDescription = menuDescription;
 	}
