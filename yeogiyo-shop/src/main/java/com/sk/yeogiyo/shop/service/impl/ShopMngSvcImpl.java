@@ -42,7 +42,8 @@ public class ShopMngSvcImpl implements ShopMngSvc {
   
   public void mod(String shopId, String nm, String desc, String passwd, String email, String addr) {
 	    ShopEntity shopEntity = null;
-	    shopEntity = new ShopEntity();
+	    shopEntity = shopRepository.findOne(shopId);
+	    
 	    shopEntity.setShopId(shopId);
 	    shopEntity.setNm(nm);
 	    shopEntity.setDesc(desc);
@@ -61,4 +62,5 @@ public class ShopMngSvcImpl implements ShopMngSvc {
 			return true;
 		}
 	}
+
 }

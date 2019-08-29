@@ -8,4 +8,5 @@ import com.sk.yeogiyo.shop.entity.ShopEntity;
 @Repository
 public interface ShopRepository extends JpaRepository<ShopEntity, String>{
 
+
 }

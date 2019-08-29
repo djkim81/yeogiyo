@@ -15,7 +15,7 @@ public class ShopDelController {
   @Autowired
   private ShopMngSvc shopMngSvc;
 	  
-  @RequestMapping(value="/shop_id", method=RequestMethod.DELETE)
+  @RequestMapping(value="/shop_del", method=RequestMethod.DELETE)
   public ResponseEntity<Void> shopDel(@RequestParam("shop_id") String shopid) {
 	  Boolean deleteResult = shopMngSvc.del(shopid);
 	  System.out.println("=======================delete 시작 ============");
