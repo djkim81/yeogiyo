@@ -10,7 +10,7 @@
   <groupId>com.sk.sample</groupId>
   <artifactId>yeogiyo-shop</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <name>yeogiyo-shop Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
