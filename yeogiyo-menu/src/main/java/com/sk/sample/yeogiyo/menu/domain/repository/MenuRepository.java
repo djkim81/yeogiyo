@@ -16,9 +16,9 @@ public interface MenuRepository extends PagingAndSortingRepository<Menu, Long>,
                                            QueryDslPredicateExecutor<Menu> {
 	List<Menu> findAll(Predicate predicate); 
 	
-	Menu findByName(@Param("name") String name);
-	List<Menu> findByMenuDescriptionFoodType(@Param("foodType") FoodType foodType);
-	List<Menu> findByPriceValueGreaterThanEqual(@Param("value") Integer value);
-	List<Menu> findByPriceValueLessThanEqual(@Param("value") Integer value);
-	List<Menu> findByPriceValueGreaterThanAndPriceValueLessThan(@Param("value1") Integer value1, @Param("value2") Integer value2);
+//	Menu findByName(@Param("name") String name);
+//	List<Menu> findByMenuDescriptionFoodType(@Param("foodType") FoodType foodType);
+//	List<Menu> findByPriceValueGreaterThanEqual(@Param("value") Integer value);
+//	List<Menu> findByPriceValueLessThanEqual(@Param("value") Integer value);
+//	List<Menu> findByPriceValueGreaterThanAndPriceValueLessThan(@Param("value1") Integer value1, @Param("value2") Integer value2);
 }
