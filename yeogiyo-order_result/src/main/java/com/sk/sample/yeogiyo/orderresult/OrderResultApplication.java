@@ -37,21 +37,21 @@ public class OrderResultApplication {
 	}
 	
 	public void insertMenus(OrderResultRepository orderResultRepository) {
-		
-		OrderItem orderItem1 = new OrderItem();
-		
-		List <OrderedMenuItem> orderedItems = null;
-		orderedItems.add( new OrderedMenuItem("201908290001", 1001 , "김치찌개", 2));
-		orderedItems.add( new OrderedMenuItem("201908290001", 1002 , "된장찌개", 1));
-		
-
-		orderItem1.setOrderId("201908290001");
-		orderItem1.setTableNum("13");
-		//orderItem1.setOrderedMenuItemList(orderedItems);
-		orderItem1.setRegDtm("14:23 19/8/29");
-		orderItem1.setOrderStatus(0);		
-		orderResultRepository.save(orderItem1);
-		
+//		
+//		OrderItem orderItem1 = new OrderItem();
+//		
+//		List <OrderedMenuItem> orderedItems = null;
+//		orderedItems.add( new OrderedMenuItem("201908290001", 1001 , "김치찌개", 2));
+//		orderedItems.add( new OrderedMenuItem("201908290001", 1002 , "된장찌개", 1));
+//		
+//
+//		orderItem1.setOrderId("201908290001");
+//		orderItem1.setTableNum("13");
+//		//orderItem1.setOrderedMenuItemList(orderedItems);
+//		orderItem1.setRegDtm("14:23 19/8/29");
+//		orderItem1.setOrderStatus(0);		
+//		orderResultRepository.save(orderItem1);
+//		
 		
 
 
