@@ -5,22 +5,35 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.ToString;
+
+@NoArgsConstructor
+@ToString
+@Getter
 @Entity
 @Table(name="SHOP")
 public class ShopEntity {
   @Id
+  @NonNull
   @Column(name="shop_id")
   private String shopId;
   
+  @NonNull
   @Column(name="nm")
   private String nm;
 
   @Column(name="desc")
   private String desc;
 
+  @NonNull
   @Column(name="passwd")
   private String passwd;
 
+  @NonNull
   @Column(name="rgst_dtm")
   private String rgstDtm;
   
@@ -80,5 +93,20 @@ public class ShopEntity {
 
   public void setAddr(String addr) {
     this.addr = addr;
+  }
+  
+  @Builder
+  public ShopEntity(String shopId, String nm, String desc, String rgstDtm, String passwd, String email, String addr) {
+    this.shopId = shopId;
+    this.nm = nm;
+    this.desc = desc;
+    this.rgstDtm = rgstDtm;
+    this.passwd = passwd;
+    this.email = email;
+    this.addr = addr;
+  }
+  
+  public ShopEntity() {
+    
   }
 }
