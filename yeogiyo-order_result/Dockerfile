@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-EXPOSE 8081
-ADD target/yeogiyo-menu-0.0.1-SNAPSHOT.jar app.jar
+EXPOSE 8083
+ADD target/yeogiyo-order_result-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]

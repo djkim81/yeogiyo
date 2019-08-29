@@ -1,12 +1,5 @@
-FROM openjdk:8-jre
-
-RUN mkdir /yeogiyo-order_result
-
-EXPOSE 8081
-
-WORKDIR /yeogiyo-order_result
-
-COPY Dockerfile .
-COPY target/*.jar /yeogiyo-order_result
-
-CMD java -Djava.security.egd=file:/dev/./urandom -jar *.jar 
+FROM openjdk:8-jdk-alpine
+VOLUME /tmp
+EXPOSE 8083
+ADD target/yeogiyo-order_result-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
