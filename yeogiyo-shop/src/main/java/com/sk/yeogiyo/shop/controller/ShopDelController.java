@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ShopRgstController {
-  @RequestMapping(value="/shop_rgst", method=RequestMethod.GET)
-  public String shopRgst() {
+public class ShopDelController {
+  @RequestMapping(value="/shop_del", method=RequestMethod.DELETE)
+  public String shopDel() {
     return "Hello, world";
   }
 }

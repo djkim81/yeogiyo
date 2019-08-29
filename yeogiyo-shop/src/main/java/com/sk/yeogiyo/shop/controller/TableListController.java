@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ShopRgstController {
-  @RequestMapping(value="/shop_rgst", method=RequestMethod.GET)
-  public String shopRgst() {
+public class TableListController {
+  @RequestMapping(value="/table_list", method=RequestMethod.GET)
+  public String tableList() {
     return "Hello, world";
   }
 }
