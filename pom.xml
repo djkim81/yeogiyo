@@ -21,6 +21,7 @@
 
 	<modules>
 		<module>yeogiyo-menu</module>
+		<module>yeogiyo-order</module>
    		<module>yeogiyo-shared</module>
 	</modules>
 
