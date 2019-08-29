@@ -18,7 +18,7 @@
 			<groupId>com.sk.sample</groupId>
 			<artifactId>yeogiyo-shared</artifactId>
 		</dependency>
-	</dependencies>
+	</dependencies> 
 
 	<build>
 		<plugins>
