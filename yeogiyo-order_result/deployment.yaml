@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: yeogiyo-order_result-deployment
+  labels:
+    app: yeogiyo-order_result
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yeogiyo-order_result
+  template:
+    metadata:
+      labels:
+        app: yeogiyo-order_result
+    spec:
+      containers:
+        - name: yeogiyo-order_result
+          image: gcr.io/yeogiyo/yeogiyo-order_result:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8083
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: yeogiyo-order_result
+  name: yeogiyo-order_result-service
+  namespace: default
+spec:
+  ports:
+    - port: 8083
+      protocol: TCP
+      targetPort: 8083
+  selector:
+    app: yeogiyo-order_result
+  type: LoadBalancer
