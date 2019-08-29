@@ -13,7 +13,6 @@ import com.sk.sample.yeogiyo.orderresult.domain.model.OrderItem;;
 public interface OrderResultRepository extends PagingAndSortingRepository<OrderItem, Long>,
                                            QueryDslPredicateExecutor<OrderItem> {
 	List<OrderItem> findAll(Predicate predicate); 
-	
 //	OrderItem findByName(@Param("name") String name);
 //	List<OrderItem> findByMenuDescriptionFoodType(@Param("foodType") FoodType foodType);
 //	List<OrderItem> findByPriceValueGreaterThanEqual(@Param("value") Integer value);

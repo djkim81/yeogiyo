@@ -13,8 +13,16 @@ import lombok.EqualsAndHashCode;
 @Entity
 public class OrderItem extends AbstractEntity implements AggregateRoot {
 	private String tableNum;
-	private String menuName;
 	private String regDtm;
+	private OrderedMenuItem menuItem;
+	
+	public OrderItem(String tableNum,  OrderedMenuItem menuItem, String regDtm) {
+		this.tableNum = tableNum;
+		this.menuItem = menuItem;
+		this.regDtm = regDtm;
+	}
+	
+	
 	
 	
 	
