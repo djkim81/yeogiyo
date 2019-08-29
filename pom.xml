@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.sk.yeogiyo</groupId>
+	<groupId>com.sk.sample</groupId>
 	<artifactId>yeogiyo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -20,9 +20,7 @@
 	</properties>
 
 	<modules>
-		<module>yeogiyo-shop</module>
 		<module>yeogiyo-menu</module>
-		<module>yeogiyo-order</module>
    		<module>yeogiyo-shared</module>
 	</modules>
 
@@ -87,7 +85,7 @@
 				<scope>import</scope>
 			</dependency>
 			<dependency>
-				<groupId>com.sk.yeogiyo</groupId>
+				<groupId>com.sk.sample</groupId>
 				<artifactId>yeogiyo-shared</artifactId>
 				<version>${yeogiyo-shared.version}</version>
 			</dependency>
@@ -116,7 +114,7 @@
 						<configuration>
 							<targetFolder>target/generated-sources/java</targetFolder>
 							<packages>
-								<package>com.sk.yeogiyo</package>
+								<package>com.sk.sample</package>
 							</packages>
 						</configuration>
 					</execution>
