@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
 
 import com.sk.yeogiyo.shop.entity.ShopEntity.ShopEntityBuilder;
 
@@ -20,6 +21,10 @@ import lombok.ToString;
 @Table(name="SHOP_TABLE")
 public class ShopTableEntity {
   @Id
+  @GeneratedValue
+  @Column(name="main_num")
+  private int mainNum;
+
   @Column(name="shop_id")
   private String shopId;
   
@@ -32,6 +37,9 @@ public class ShopTableEntity {
   @Column(name="rgst_dtm")
   private String rgstDtm;
   
+  public int getMainNum() {
+	  return mainNum;
+  }
   public String getShopId() {
     return shopId;
   }
