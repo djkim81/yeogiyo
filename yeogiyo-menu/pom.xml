@@ -16,6 +16,7 @@
 		<dependency>
 			<groupId>com.sk.sample</groupId>
 			<artifactId>yeogiyo-shared</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
