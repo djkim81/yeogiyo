@@ -7,16 +7,15 @@ import javax.persistence.Table;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.ToString;
 
-@NoArgsConstructor
 @ToString
 @Getter
 @Entity
 @Table(name = "SHOP")
 public class ShopEntity {
+<<<<<<< HEAD
 	@Id
 	@NonNull
 	@Column(name = "shop_id")
@@ -105,4 +104,6 @@ public class ShopEntity {
 		this.email = email;
 		this.addr = addr;
 	}
+	  public ShopEntity() {
+	  }
 }
