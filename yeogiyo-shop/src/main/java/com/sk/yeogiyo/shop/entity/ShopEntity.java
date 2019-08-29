@@ -15,7 +15,6 @@ import lombok.ToString;
 @Entity
 @Table(name = "SHOP")
 public class ShopEntity {
-<<<<<<< HEAD
 	@Id
 	@NonNull
 	@Column(name = "shop_id")

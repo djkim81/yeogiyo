@@ -1,6 +1,6 @@
 var textIdInput = "";
 var textPassInput = "";
-var emailValidRegExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+var emailValidRegExp = /^[a-zA-Z]{8,16}$/i;
 
 $(document).ready(function() {
   if ($("#input-id").hasClass("input_success") === true) {
@@ -77,7 +77,20 @@ function loginProcess() {
   if (loginValidChk() === false) {
     return;
   }
-  cmnSyncCall("GetRSAKey", {}, callback, null);          
+  $.ajax({url: "/login", data: {shopId: $("#input-id").val().trim(), passwd: $("#input-pass").val()}, method: "GET"
+	  , dataType: "json"
+      , success: function(data) {
+        if (data.is_login === false) {
+          Swal.fire({
+            type: "error",
+        	title: "Ooops...",
+        	text: "로그인에 실패하였습니다." 
+          });
+        } else {
+          location.href = "/order_";
+        }
+      }
+  });
 }
 
 function loginValidChk() {

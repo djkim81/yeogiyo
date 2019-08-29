@@ -1,4 +1,4 @@
-var emailValidRegExp = /^[a-zA-Z]([0-9a-zA-Z]){8,16}$/i;
+var emailValidRegExp = /^[a-zA-Z]([0-9a-zA-Z]){6,16}$/i;
 
 $(document).ready(function() {
   $("#input-phone").parent().siblings("button").click(function(event) {
@@ -52,38 +52,21 @@ function eventBtnConfirmClick(event) {
   if (validRegisterValue() === false) {
     return false;
   }
-  cmnSyncCall("GetRSAKey", {}, callback, null);
-}
-
-function callback(data, act, input_param, callbackVar) {
-  if (act === "GetRSAKey") {
-    var rsa = new RSAKey();
-    rsa.setPublic(data.pub_key_modulus, data.pub_key_exponent);
-    cmnSyncCall("Register", {email: rsa.encrypt($("#input-id").val().trim()), login_passwd: rsa.encrypt($("#input-pass").val())
-                             , user_nm: rsa.encrypt($("#input-name").val().trim())
-                             ,  pub_modulus: data.pub_key_modulus, pub_exponent: data.pub_key_exponent
-                            }, callback, null, callbackErr);
-  } else if (act === "Register") {
-    var redirectUrl = "/cmn/cmn/subscription_completion?email=" + encodeURIComponent($("#input-id").val().trim());
-    var redirectUrlParam = getParameter("redirect_url");
-    if (typeof redirectUrlParam !== "undefined" && redirectUrlParam !== null && redirectUrlParam.length > 0) {
-      redirectUrl = redirectUrl + "&redirect_url=" + encodeURIComponent(redirectUrlParam);
-    }
-    $("#_cmn_loader").show();
-    location.href = redirectUrl;
-  }
-}
-
-function callbackErr(error_num, tpNm, param, callbackVar) {
-  if (error_num === 24) {
-    setErrMsg("사전에 이미 등록되어있는 이메일 주소입니다..");    
-    if ($("#input-id").hasClass("input-error") === false) {
-      $("#input-id").addClass("input-error")
-    }
-    if ($("#input-id").hasClass("input-success") === true) {
-      $("#input-id").removeClass("input-success");
-    }
-  }
+  $.ajax({url: "/shop_rgst", data: {shopId: $("#input-id").val().trim(), nm: $("#input-name").val().trim()
+	  , desc: $("#input-phone").val().trim(), passwd: $("#input-pass").val()
+	  , email: $("#input-email").val().trim(), addr: $("#input-addr").val().trim()
+	}, dataType:"json"
+	 , method: "POST"
+	 , success: function(data) {
+       Swal.fire({
+	     title: "Good job!",
+	     type: "success",
+         text: "회원 가입에 성공하였습니다."
+	   }).then(function (result) {
+	     location.href = "/ui/login";
+	   });
+	  }
+	});
 }
 
 function validRegisterValue() {
