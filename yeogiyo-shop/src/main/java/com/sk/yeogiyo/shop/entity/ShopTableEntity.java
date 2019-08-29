@@ -5,6 +5,17 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.sk.yeogiyo.shop.entity.ShopEntity.ShopEntityBuilder;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.ToString;
+
+@NoArgsConstructor
+@ToString
+@Getter
 @Entity
 @Table(name="SHOP_TABLE")
 public class ShopTableEntity {
@@ -52,4 +63,12 @@ public class ShopTableEntity {
   public void setRgstDtm(String rgstDtm) {
     this.rgstDtm = rgstDtm;
   }
+  
+	@Builder
+	public ShopTableEntity(String shopId, int tableNum, String desc, String rgstDtm) {
+		this.shopId = shopId;
+		this.tableNum = tableNum;
+		this.desc = desc;
+		this.rgstDtm = rgstDtm;
+	}
 }
