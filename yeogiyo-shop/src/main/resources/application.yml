@@ -1,5 +1,5 @@
 server:
-  port: 8080  # Spring boot Server port
+  port: 8087  # Spring boot Server port
 
 spring:
   h2:
