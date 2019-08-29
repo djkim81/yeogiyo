@@ -10,17 +10,39 @@
   <groupId>com.sk.sample</groupId>
   <artifactId>yeogiyo-shop</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <name>yeogiyo-shop Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
-        <groupId>com.google.zxing</groupId>
-        <artifactId>javase</artifactId>
-        <version>3.4.0</version>
+      <groupId>com.google.zxing</groupId>
+      <artifactId>javase</artifactId>
+      <version>3.4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
   <build>
     <finalName>yeogiyo-shop</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>com.sk.yeogiyo.shop.YeogiyoShopApplication</mainClass>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
 </project>

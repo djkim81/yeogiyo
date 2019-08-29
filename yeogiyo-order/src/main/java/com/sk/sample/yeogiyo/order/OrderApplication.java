@@ -74,15 +74,15 @@ public class OrderApplication {
 		System.out.println("***************************************************************");
 	}
 	
-//	public void executeExample1(OrderRepository orderRepository) {
-//		
-//		Ordered order = orderRepository.findByTnum("7001");		
-//		order.setOrder_st("결제완료");
-//		orderRepository.save(order);
-//		
-//		displayOrders(orderRepository);
-//	}	
-//	
+	public void executeExample1(OrderRepository orderRepository) {
+		
+		Ordered order = orderRepository.findByTnum("7001");		
+		order.setOrder_st("결제완료");
+		orderRepository.save(order);
+		
+		displayOrders(orderRepository);
+	}	
+	
 //	public void executeExample2(orderRepository productRepository) {
 //		Menu product = productRepository.findByName("Iron Man");
 //		

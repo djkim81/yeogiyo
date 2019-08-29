@@ -1,6 +1,6 @@
 package com.sk.sample.yeogiyo.orderresult;
 
-import java.util.List;
+import java.awt.Menu;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -8,8 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.hateoas.config.EnableHypermediaSupport;
 
-import com.sk.sample.yeogiyo.orderresult.domain.model.OrderItem;
-import com.sk.sample.yeogiyo.orderresult.domain.model.OrderedMenuItem;
 import com.sk.sample.yeogiyo.orderresult.domain.repository.OrderResultRepository;
 
 
@@ -36,25 +34,15 @@ public class OrderResultApplication {
 		};
 	}
 	
-	public void insertMenus(OrderResultRepository orderResultRepository) {
+	public void insertMenus(OrderResultRepository OrderResultRepository) {
+//		Menu menu1 = new Menu("김치찌게", new Price(7000), new MenuDescription(FoodType.KOREAN));
+//		OrderResultRepository.save(menu1);
 //		
-//		OrderItem orderItem1 = new OrderItem();
+//		Menu menu2 = new Menu("짜장면", new Price(6000), new MenuDescription(FoodType.CHINESE));
+//		OrderResultRepository.save(menu2);
 //		
-//		List <OrderedMenuItem> orderedItems = null;
-//		orderedItems.add( new OrderedMenuItem("201908290001", 1001 , "김치찌개", 2));
-//		orderedItems.add( new OrderedMenuItem("201908290001", 1002 , "된장찌개", 1));
-//		
-//
-//		orderItem1.setOrderId("201908290001");
-//		orderItem1.setTableNum("13");
-//		//orderItem1.setOrderedMenuItemList(orderedItems);
-//		orderItem1.setRegDtm("14:23 19/8/29");
-//		orderItem1.setOrderStatus(0);		
-//		orderResultRepository.save(orderItem1);
-//		
-		
-
-
+//		Menu menu3 = new Menu("파스타", new Price(12000), new MenuDescription(FoodType.ITALIAN));
+//		OrderResultRepository.save(menu3);
 	}
 	
 	public void displayMenus(OrderResultRepository OrderResultRepository) {

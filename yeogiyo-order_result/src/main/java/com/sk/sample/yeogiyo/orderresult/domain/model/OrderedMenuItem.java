@@ -10,14 +10,13 @@ import lombok.Data;
 @Data
 public class OrderedMenuItem implements ValueObject {
 	
-	private String orderId;
+	
 	private int menuId;
 	private String menuName;
 	private int count;
 	
 
-	public OrderedMenuItem(String orderId, int menuId, String menuName, int count) {
-		this.orderId = orderId;
+	public OrderedMenuItem(int menuId, String menuName, int count) {
 		this.menuId = menuId;
 		this.menuName = menuName;
 		this.count = count;
