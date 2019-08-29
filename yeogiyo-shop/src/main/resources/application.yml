@@ -1,5 +1,4 @@
 spring:
-  application:
-     name: myconfigserver
-  profiles:
-     active: native
+  h2:
+   console:
+     enabled: true

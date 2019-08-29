@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.sk.yeogiyo.shop.entity.ShopEntity;
 
 @Repository
-public interface ShopRepository extends JpaRepository<ShopEntity, Long>{
+public interface ShopRepository extends JpaRepository<ShopEntity, String>{
 
 }

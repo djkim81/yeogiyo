@@ -59,11 +59,11 @@ public class ShopEntity {
     return passwd;
   }
 
-  public String email() {
+  public String getEmail() {
     return email;
   }
 
-  public String addr() {
+  public String getAddr() {
     return addr;
   }
   

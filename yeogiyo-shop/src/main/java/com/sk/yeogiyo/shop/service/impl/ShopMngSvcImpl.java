@@ -1,5 +1,8 @@
 package com.sk.yeogiyo.shop.service.impl;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +24,19 @@ public class ShopMngSvcImpl implements ShopMngSvc {
     shopEntity.setPasswd(passwd);
     shopEntity.setEmail(email);
     shopEntity.setAddr(addr);
-    shopRepository.save(shopEntity);    
+    shopRepository.save(shopEntity);
+  }
+  
+  public Map<String, Object> getOneShopInfo(String shopId) {
+    Map<String, Object> retMap = null;
+    ShopEntity shopEntity = null;
+    shopEntity = new ShopEntity();
+    shopEntity = shopRepository.findOne(shopId);
+    retMap = new HashMap<String, Object>();
+    retMap.put("nm", shopEntity.getNm());
+    retMap.put("desc", shopEntity.getDesc());
+    retMap.put("email", shopEntity.getEmail());
+    retMap.put("addr", shopEntity.getAddr());
+    return retMap;
   }
 }
