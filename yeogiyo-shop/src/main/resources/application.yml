@@ -10,8 +10,3 @@ spring:
     view:
       prefix: /WEB-INF/view/
       suffix: .jsp
-#  datasource:
-#    driver-class-name: org.h2.Driver
-#    url: jdbc:h2:mem:yeogiyoshop;AUTO_SERVER=TRUE
-#    username: yeogiyoshop
-#    password: yeogiyoshop
