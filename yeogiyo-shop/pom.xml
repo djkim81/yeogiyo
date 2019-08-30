@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.sk.sample</groupId>
-	<artifactId>yeogiyo</artifactId>
+	<artifactId>yeogiyo-shop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<name>yeogiyo</name>
+	<packaging>jar</packaging>
+	<name>yeogiyo-shop</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -205,18 +205,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<!--  
-	<repositories>
-        <repository>
-            <id>spring-snapshots</id>
-            <url>https://repo.spring.io/snapshot</url>
-            <snapshots><enabled>true</enabled></snapshots>
-        </repository>
-        <repository>
-            <id>spring-milestones</id>
-            <url>https://repo.spring.io/milestone</url>
-        </repository>
-    </repositories>
-    -->
 </project>
