@@ -39,11 +39,13 @@ public class OrderLogic implements OrderService {
 //
 	@Override
 	@Transactional
-	public Ordered update(Long id, Ordered newOrder) {
+	public Ordered updateOrdered(Long id) {
 		Ordered oldOrder = orderRepository.findOne(id);
 		if(oldOrder != null) {
-			BeanUtils.copyProperties(newOrder,  oldOrder, "id");
+			
+			oldOrder.setOrder_st("주문완료");
 			return orderRepository.save(oldOrder);
+
 		} else { 
 			return null;
 		}

@@ -16,6 +16,9 @@ public interface OrderRepository extends PagingAndSortingRepository<Ordered, Lon
 	//List<Ordered> findAll(Predicate predicate); 
 	
 	Ordered findByTnum(@Param("tnum") String tnum);
+	
+	//Ordered updateOrdered(@Param("id") String id);
+	
 	//Ordered findByShop_id(@Param("shop_id") String shop_id);
 	
 	//Order findByShopId(@Param("shopid") ShopId shopid);
