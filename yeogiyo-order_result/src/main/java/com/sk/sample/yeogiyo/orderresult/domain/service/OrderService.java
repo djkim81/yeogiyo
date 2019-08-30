@@ -5,6 +5,8 @@ import com.sk.sample.yeogiyo.orderresult.domain.model.Ordered;
 public interface OrderService {
 //	Ordered findById(Long id);
 	Ordered findByTnum(String tnum);
+	
+	
 	//Ordered findByShop_id(String shop_id);
 	
 //	List<Ordered> findAll();
@@ -14,7 +16,8 @@ public interface OrderService {
 //	Ordered findByTableNum(String table_num);
 //	
 //	Ordered register(Ordered order); 
-	Ordered update(Long id, Ordered order);
+	//Ordered update(Long id, Ordered order);
 //
 //	void delete(Long id);
+
 }

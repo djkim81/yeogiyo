@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.sk.sample.yeogiyo.orderresult.domain.model.Ordered;
 import com.sk.sample.yeogiyo.orderresult.domain.repository.OrderResultRepository;
 
-@Service("orderLogic")
+@Service("OrderResultLogic")
 public class OrderResultLogic implements OrderService {
 	@Autowired
 	private OrderResultRepository OrderResultRepository;
@@ -27,17 +27,15 @@ public class OrderResultLogic implements OrderService {
 //	}
 	
 //
-	@Override
-	@Transactional
-	public Ordered update(Long id, Ordered newOrder) {
-		Ordered oldOrder = OrderResultRepository.findOne(id);
-		if(oldOrder != null) {
-			BeanUtils.copyProperties(newOrder,  oldOrder, "id");
-			return OrderResultRepository.save(oldOrder);
-		} else { 
-			return null;
-		}
-	}
+	/*
+	 * @Override
+	 * 
+	 * @Transactional public Ordered update(Long id, Ordered newOrder) { Ordered
+	 * oldOrder = OrderResultRepository.findOne(id); if(oldOrder != null) {
+	 * BeanUtils.copyProperties(newOrder, oldOrder, "id"); return
+	 * OrderResultRepository.save(oldOrder); } else { return null; } }
+	 */
+
 	
 //	@Override
 //	@Transactional(readOnly=true)
