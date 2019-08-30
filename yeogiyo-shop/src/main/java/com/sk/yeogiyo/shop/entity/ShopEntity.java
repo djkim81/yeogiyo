@@ -13,96 +13,97 @@ import lombok.ToString;
 @ToString
 @Getter
 @Entity
-@Table(name = "SHOP")
+@Table(name="SHOP")
 public class ShopEntity {
-	@Id
-	@NonNull
-	@Column(name = "shop_id")
-	private String shopId;
+  @Id
+  @NonNull
+  @Column(name="shop_id")
+  private String shopId;
+  
+  @NonNull
+  @Column(name="nm")
+  private String nm;
 
-	@NonNull
-	@Column(name = "nm")
-	private String nm;
+  @Column(name="desc")
+  private String desc;
 
-	@Column(name = "desc")
-	private String desc;
+  @NonNull
+  @Column(name="passwd")
+  private String passwd;
 
-	@NonNull
-	@Column(name = "passwd")
-	private String passwd;
+  @NonNull
+  @Column(name="rgst_dtm")
+  private String rgstDtm;
+  
+  @Column(name="email")
+  private String email;
+  
+  @Column(name="addr")
+  private String addr;
+  
+  public String getShopId() {
+    return shopId;
+  }
 
-	@NonNull
-	@Column(name = "rgst_dtm")
-	private String rgstDtm;
+  public String getNm() {
+    return nm;
+  }
 
-	@Column(name = "email")
-	private String email;
+  public String getDesc() {
+    return desc;
+  }
 
-	@Column(name = "addr")
-	private String addr;
+  public String getPasswd() {
+    return passwd;
+  }
 
-	public String getShopId() {
-		return shopId;
-	}
+  public String getEmail() {
+    return email;
+  }
 
-	public String getNm() {
-		return nm;
-	}
+  public String getAddr() {
+    return addr;
+  }
+  
+  public void setShopId(String shopId) {
+    this.shopId = shopId;
+  }
 
-	public String getDesc() {
-		return desc;
-	}
+  public void setNm(String nm) {
+    this.nm = nm;
+  }
 
-	public String getPasswd() {
-		return passwd;
-	}
+  public void setDesc(String desc) {
+    this.desc = desc;
+  }
 
-	public String getEmail() {
-		return email;
-	}
+  public void setRgstDtm(String rgstDtm) {
+    this.rgstDtm = rgstDtm;
+  }
+  
+  public void setPasswd(String passwd) {
+    this.passwd = passwd;
+  }
 
-	public String getAddr() {
-		return addr;
-	}
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-	public void setShopId(String shopId) {
-		this.shopId = shopId;
-	}
+  public void setAddr(String addr) {
+    this.addr = addr;
+  }
+  
+  @Builder
+  public ShopEntity(String shopId, String nm, String desc, String rgstDtm, String passwd, String email, String addr) {
+    this.shopId = shopId;
+    this.nm = nm;
+    this.desc = desc;
+    this.rgstDtm = rgstDtm;
+    this.passwd = passwd;
+    this.email = email;
+    this.addr = addr;
+  }
 
-	public void setNm(String nm) {
-		this.nm = nm;
-	}
-
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
-
-	public void setRgstDtm(String rgstDtm) {
-		this.rgstDtm = rgstDtm;
-	}
-
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public void setAddr(String addr) {
-		this.addr = addr;
-	}
-
-	@Builder
-	public ShopEntity(String shopId, String nm, String desc, String rgstDtm, String passwd, String email, String addr) {
-		this.shopId = shopId;
-		this.nm = nm;
-		this.desc = desc;
-		this.rgstDtm = rgstDtm;
-		this.passwd = passwd;
-		this.email = email;
-		this.addr = addr;
-	}
-	  public ShopEntity() {
-	  }
+  public ShopEntity() {
+  }
 }
