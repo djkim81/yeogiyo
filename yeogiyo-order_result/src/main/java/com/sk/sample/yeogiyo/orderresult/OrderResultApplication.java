@@ -1,15 +1,12 @@
 package com.sk.sample.yeogiyo.orderresult;
 
-import java.util.List;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.hateoas.config.EnableHypermediaSupport;
 
-import com.sk.sample.yeogiyo.orderresult.domain.model.OrderItem;
-import com.sk.sample.yeogiyo.orderresult.domain.model.OrderedMenuItem;
+import com.sk.sample.yeogiyo.orderresult.domain.model.Ordered;
 import com.sk.sample.yeogiyo.orderresult.domain.repository.OrderResultRepository;
 
 
@@ -24,37 +21,29 @@ public class OrderResultApplication {
 	@Bean
 	public CommandLineRunner execSampleCode(OrderResultRepository OrderResultRepository) {	
 		return (args) -> {
-//			insertMenus(OrderResultRepository);
+			insertMenus(OrderResultRepository);
 //			displayMenus(OrderResultRepository);
-			
-//			executeExample2(accountRepository);
-//			executeExample3(accountRepository);
-//			executeExample4(accountRepository);
-//			executeExample5(accountRepository);
-//			executeExample6(accountRepository);
-//			executeExample7(accountRepository);
 		};
 	}
 	
-	public void insertMenus(OrderResultRepository orderResultRepository) {
-//		
-//		OrderItem orderItem1 = new OrderItem();
-//		
-//		List <OrderedMenuItem> orderedItems = null;
-//		orderedItems.add( new OrderedMenuItem("201908290001", 1001 , "김치찌개", 2));
-//		orderedItems.add( new OrderedMenuItem("201908290001", 1002 , "된장찌개", 1));
-//		
-//
-//		orderItem1.setOrderId("201908290001");
-//		orderItem1.setTableNum("13");
-//		//orderItem1.setOrderedMenuItemList(orderedItems);
-//		orderItem1.setRegDtm("14:23 19/8/29");
-//		orderItem1.setOrderStatus(0);		
-//		orderResultRepository.save(orderItem1);
-//		
+	public void insertMenus(OrderResultRepository OrderResultRepository) {
 		
-
-
+		
+		Ordered order1 = new Ordered("shop_1","7001","주문요청","김치찌개","1","2019/08/29 14:25"); //, new TableNum(7000));
+		OrderResultRepository.save(order1);
+		Ordered order2 = new Ordered("shop_1","7002","주문요청","된장찌개","1","2019/08/29 14:35"); //, new TableNum(7000));
+		OrderResultRepository.save(order2);
+		Ordered order3 = new Ordered("shop_1","7003","주문요청","돈까스","1","2019/08/29 14:37"); //, new TableNum(7000));
+		OrderResultRepository.save(order3);	
+		
+//		Menu menu1 = new Menu("김치찌게", new Price(7000), new MenuDescription(FoodType.KOREAN));
+//		OrderResultRepository.save(menu1);
+//		
+//		Menu menu2 = new Menu("짜장면", new Price(6000), new MenuDescription(FoodType.CHINESE));
+//		OrderResultRepository.save(menu2);
+//		
+//		Menu menu3 = new Menu("파스타", new Price(12000), new MenuDescription(FoodType.ITALIAN));
+//		OrderResultRepository.save(menu3);
 	}
 	
 	public void displayMenus(OrderResultRepository OrderResultRepository) {

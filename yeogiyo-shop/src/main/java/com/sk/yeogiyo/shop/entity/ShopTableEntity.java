@@ -4,11 +4,24 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.ToString;
+
+@ToString
+@Getter
 @Entity
 @Table(name="SHOP_TABLE")
 public class ShopTableEntity {
   @Id
+  @GeneratedValue
+  @Column(name="main_num")
+  private int mainNum;
+
   @Column(name="shop_id")
   private String shopId;
   
@@ -21,6 +34,9 @@ public class ShopTableEntity {
   @Column(name="rgst_dtm")
   private String rgstDtm;
   
+  public int getMainNum() {
+	  return mainNum;
+  }
   public String getShopId() {
     return shopId;
   }
@@ -52,4 +68,16 @@ public class ShopTableEntity {
   public void setRgstDtm(String rgstDtm) {
     this.rgstDtm = rgstDtm;
   }
+  
+	@Builder
+	public ShopTableEntity(String shopId, int tableNum, String desc, String rgstDtm) {
+		this.shopId = shopId;
+		this.tableNum = tableNum;
+		this.desc = desc;
+		this.rgstDtm = rgstDtm;
+	}
+	
+	public ShopTableEntity() {
+	  super();
+	}
 }

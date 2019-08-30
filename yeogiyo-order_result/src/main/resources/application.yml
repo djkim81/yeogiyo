@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: 11002
 
 spring:
   h2:
@@ -8,7 +8,7 @@ spring:
       path: /h2-console
 
   datasource:
-    url: jdbc:h2:mem:orderresult
+    url: jdbc:h2:mem:product
     driverClassName: org.h2.Driver
     username: sa
     password:
