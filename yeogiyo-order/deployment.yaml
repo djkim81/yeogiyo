@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: yeogiyo-order
-          image: gcr.io/yeogiyo/yeogiyo-order:latest
+          image: gcr.io/my-project-yeogi/yeogiyo-order:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8082
