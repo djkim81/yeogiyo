@@ -3,8 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
-	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sk.sample</groupId>
 	<artifactId>yeogiyo-order</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -130,7 +128,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>${spring-boot.version}</version>
             	 <configuration>
-		          <mainClass>com.sk.sample.yeogiyo.orderresult.OrderResultApplication</mainClass>
+		          <mainClass>com.sk.sample.yeogiyo.order.OrderApplication</mainClass>
 		        </configuration>
 		        <executions>
 		          <execution>
@@ -188,6 +186,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
+
 
 </project>

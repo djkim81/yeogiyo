@@ -19,7 +19,7 @@ public interface OrderService {
 //	Ordered findByTableNum(String table_num);
 //	
 //	Ordered register(Ordered order); 
-	Ordered updateOrdered(Long id);
+	Ordered update(Long id, Ordered order);
 //
 //	void delete(Long id);
 }

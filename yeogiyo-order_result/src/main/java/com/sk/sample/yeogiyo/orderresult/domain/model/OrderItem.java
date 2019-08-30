@@ -1,5 +1,7 @@
 package com.sk.sample.yeogiyo.orderresult.domain.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 
 import com.sk.sample.yeogiyo.shared.base.AbstractEntity;
@@ -12,14 +14,23 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper=true)
 @Entity
 public class OrderItem extends AbstractEntity implements AggregateRoot {
+	
+	private String orderId; 
 	private String tableNum;
 	private String regDtm;
-	private OrderedMenuItem menuItem;
+	//public List<OrderedMenuItem> OrderedMenuItemList;
+	private int orderStatus;
 	
-	public OrderItem(String tableNum,  OrderedMenuItem menuItem, String regDtm) {
+	
+	public OrderItem() {
+		
+	}
+	public OrderItem(String orderId, String tableNum, String regDtm, int orderStatus) {
+		this.orderId = orderId;
 		this.tableNum = tableNum;
-		this.menuItem = menuItem;
+		//this.OrderedMenuItemList = OrderedMenuItemList;
 		this.regDtm = regDtm;
+		this.orderStatus = orderStatus;
 	}
 	
 	
