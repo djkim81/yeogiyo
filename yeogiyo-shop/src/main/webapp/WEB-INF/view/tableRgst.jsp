@@ -58,16 +58,18 @@
                                 <ul class="input-list" style="width:800px;">
                                     <li>
                                         <span class="trp check_validity" style="width:800px;">
-                                            <input type="text" placeholder="테이블 번호" class="js-table_num" id="input-table_num" style="width:30px;">
+                                            <input type="text" placeholder="테이블 번호" class="js-table_num" style="width:90px;">
                                             <i></i>
-                                            <input type="text" placeholder="테이블 설병" class="js-table_desc" id="input-table_desc" style="width:250px;">
+                                            <input type="text" placeholder="테이블 설명" class="js-table_desc" id="input-table_desc" style="width:250px;">
                                             <i></i>
-                                            <button class="btn btn_gray btn_md js-certification" type="button" style="width:20px;">추가</button>
+                                            <button class="btn btn_gray btn_md js-add" type="button" style="width:20px;">추가</button>
+                                            <button class="btn btn_gray btn_md js-barcd" type="button" style="width:20px;">바코드</button>
                                         </span>
                                     </li>
                                 </ul>
                             </form>
                         </article>
+                        <button class="btn btn_gray btn_md js-save" type="button" style="width:80px;">저장</button>
 
                     </div>
                 </section>
