@@ -41,11 +41,9 @@ public class OrderLogic implements OrderService {
 	@Transactional
 	public Ordered updateOrdered(Long id) {
 		Ordered oldOrder = orderRepository.findOne(id);
-		if(oldOrder != null) {
-			
+		if(oldOrder != null) {			
 			oldOrder.setOrder_st("주문완료");
 			return orderRepository.save(oldOrder);
-
 		} else { 
 			return null;
 		}
