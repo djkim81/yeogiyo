@@ -6,8 +6,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.GeneratedValue;
 
-import com.sk.yeogiyo.shop.entity.ShopEntity.ShopEntityBuilder;
-
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -78,5 +76,9 @@ public class ShopTableEntity {
 		this.tableNum = tableNum;
 		this.desc = desc;
 		this.rgstDtm = rgstDtm;
+	}
+	
+	public ShopTableEntity() {
+	  super();
 	}
 }

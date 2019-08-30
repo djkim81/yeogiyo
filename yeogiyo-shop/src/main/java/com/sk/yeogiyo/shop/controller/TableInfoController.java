@@ -1,5 +1,8 @@
 package com.sk.yeogiyo.shop.controller;
 
+import java.util.Base64;
+import java.util.Base64.Encoder;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,18 +26,20 @@ public class TableInfoController {
 	@RequestMapping(value="/table_info", method=RequestMethod.GET)
 	public Map<String, Object> tableInfo(Model model, @RequestParam("shopId") String id, @RequestParam("tableNum") int tableNum){
 		Map<String, Object> tableInfo = null;
+    Map<String, Object> retMap = null;
 		tableInfo = tableMngSvc.getOneShopTableInfo(id, tableNum);
 		String encodedQrImg = null;
+		Encoder encoder = null;
+		encoder = Base64.getEncoder();
 		try {
-		  encodedQrImg = new String(qrMngSvc.getQrImgByte("url").toByteArray());
+		  encodedQrImg = new String(encoder.encode(qrMngSvc.getQrImgByte("https://www.naver.com").toByteArray()));
 		} catch (Exception e) {
 			encodedQrImg = "";
 		}
-		model.addAttribute("tableNum", tableInfo.get("tableNum"));
-		model.addAttribute("desc", tableInfo.get("desc"));
-		model.addAttribute("encodedQrImg", encodedQrImg);
-		return tableInfo;
+		retMap = new HashMap<String, Object>();
+		retMap.put("tableNum", tableInfo.get("tableNum"));
+    retMap.put("desc", tableInfo.get("desc"));
+    retMap.put("encodedQrImg", encodedQrImg);
+		return retMap;
 	}
-	
-  
 }
